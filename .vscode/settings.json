@@ -1,0 +1,11 @@
+{
+    "cmake.configureOnOpen": false,
+    "cmake.sourceDirectory": "${workspaceFolder}/.",
+    "cmake.buildDirectory": "./Build",
+    "cmake.cmakePath": "C:/msys64/usr/bin/cmake.exe",
+    "cmake.generator": "Unix Makefiles",
+    "cmake.configureSettings": {
+        "CMAKE_CXX_COMPILER": "/usr/bin/make"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools"
+}
