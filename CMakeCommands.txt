@@ -1,2 +1,3 @@
 cmake --build .\Build // build from the root
 cmake --build . --target Problem04
+cmake --build . --target Problem05
