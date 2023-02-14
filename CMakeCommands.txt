@@ -1,3 +1,12 @@
 cmake --build .\Build // build from the root
 cmake --build . --target Problem04
 cmake --build . --target Problem05
+cmake ..                                        // Generates Necessary files for Build
+
+cmake --build . //build All Files
+
+add_executable(MyAPP ${SOURCES} ${HEADERS})                     //add all headers 
+target_include_directories(MyAPP PRIVATE "Source/include")      //add all cpp
+
+cmake -G "Unix Makefiles" ..    // set the generator to unix makefile
+ 

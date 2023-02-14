@@ -4,11 +4,21 @@ project(Project_Name)
 file(GLOB_RECURSE SOURCES "Source/src/*.cpp")
 file(GLOB_RECURSE HEADERS "Source/include/*.h")
 
-add_executable(MyAPP ${SOURCES} ${HEADERS})
-add_executable(Problem04 "Source/src/Problem_04.cpp" )
-add_executable(Problem05 "Source/src/Problem_05.cpp" )
-add_executable(Problem06 "Source/src/Problem_06.cpp" )
-add_executable(Problem07 "Source/src/Problem_07.cpp" )
-target_include_directories(MyAPP PRIVATE "Source/include")
+
+function(add_executable_with_includes name)
+  add_executable(${name} "Source/src/${name}.cpp")
+  target_include_directories(${name} PRIVATE "Source/include")
+endfunction()
+
+add_executable_with_includes(Problem_01)
+add_executable_with_includes(Problem_02)
+add_executable_with_includes(Problem_03)
+add_executable_with_includes(Problem_04)
+add_executable_with_includes(Problem_05)
+add_executable_with_includes(Problem_06)
+add_executable_with_includes(Problem_07)
+add_executable_with_includes(Problem_08)
+
+
 
 set(CMAKE_PREFIX_PATH "C:/Libraries/vcpkg/installed")
